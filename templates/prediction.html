@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+        <h1>Predicting AQI</h1>
+    </head>
+    <body>
+        <form action='/prediction' method='POST'>
+            <label for='T'>Average Annual Temperature</label><br>
+            <input type='text' id='T' name='T' value='0'><br>
+            <label for='TM'>Annual Average Maximum temperature</label><br>
+            <input type='text' id='TM' name='TM' value='0'><br>
+            <label for='SLP'>Atmospheric Pressure at sea level</label><br>
+            <input type='text' id='SLP' name='SLP' value='0'><br>
+            <label for='H'>Average Relative Humidity</label><br>
+            <input type='text' id='H' name='H' value='0'><br>
+            <label for='W'>W</label><br>
+            <input type='text' id='W' name='W' value='0'><br>
+            <label for='V'>Average Wind Speed</label><br>
+            <input type='text' id='V' name='V' value='0'><br>
+            <label for='VM'>Maximum Sustained Wind Speed</label><br>
+            <input type='text' name='VM' id='VM' value='0'><br><br>
+            <input type='submit' value='Submit'><br><br><br><br>
+        </form>
+           Air Quality Index: {{result}}
+</html>
