@@ -4,7 +4,7 @@ from flask import Flask,render_template,url_for,request,redirect
 app=Flask(__name__)
 
 #pickle
-pickle_in=open('B:/MY_WORKS/PROJECT/Air quality index/rf_regresser.pkl','rb')
+pickle_in=open('rf_regresser.pkl','rb')
 regresser=pickle.load(pickle_in)
 
 @app.route('/')
